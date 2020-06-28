@@ -310,7 +310,7 @@ p
 
 .footer
 {
-    height: 400px;
+    height: 100px;
     background: #000;
 }
 
@@ -319,6 +319,6 @@ p
     font-size: 15px;
     font-weight: 100;
     text-align: center;
-    padding-top: 370px;
+    padding-top: 60px;
     color: #FFF;
 }

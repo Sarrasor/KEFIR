@@ -11,7 +11,9 @@ article > h1
 
 article > h2
 {
+    font-size: 2em;
     font-weight: 800;
+    margin-bottom: 0;
 }
 
 article > p 
@@ -27,6 +29,13 @@ article > p
     color: rgba(0,0,0,.84);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+}
+
+.bold-quote
+{
+    font-size: 30px;
+    color: #000;
+    font-weight: 1000;
 }
 
 li
