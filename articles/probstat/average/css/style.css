@@ -16,6 +16,21 @@
 	color: #FFF;
 }
 
+.header
+{
+	color: #000;
+	background: #FFF;	
+}
+
+.linkblock > a
+{
+    border-radius: 15px;
+	border-style: solid;
+	border-width: 2px;
+	padding: 10px;
+	color: #000;
+}
+
 .article-header > h1
 {
 	font-size: 3em;
