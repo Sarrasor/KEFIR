@@ -1,0 +1,101 @@
+article > *
+{
+    min-width: 0;
+}
+
+article > h1 
+{
+    font-size: 3em;
+    font-weight: 800;
+}
+
+article > h2
+{
+    font-weight: 800;
+}
+
+article > p 
+{    
+    --x-height-multiplier: 0.375;
+    --baseline-multiplier: 0.17;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    color: rgba(0,0,0,.84);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+li
+{    
+    --x-height-multiplier: 0.375;
+    --baseline-multiplier: 0.17;
+    letter-spacing: .01rem;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    color: rgba(0,0,0,.84);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+article > .important 
+{
+    font-weight: 600;
+    margin: 30px 20px;
+    color: #db3c0f;
+    font-size: 1.0em;
+}
+
+img 
+{
+    width: 100%;
+}
+
+.line-numbers a 
+{
+    text-decoration: none;
+    color: #000;
+    padding-right: 1em;
+}
+
+code 
+{
+    background: #eee;
+    padding: 2px 5px;
+}
+
+pre 
+{
+    background: #eee;
+    padding: 10px 15px;
+    overflow: auto;
+}
+
+pre > code 
+{
+    padding: 0;
+}
+
+figure > .fullscreen
+{
+    margin: 0;
+}
+
+figure > .medium
+{
+    margin: 0;
+}
+
+figure > figcaption 
+{
+    color: #666;
+    /*font-style: italic;*/
+    font-size: 1.0em;
+    margin:10px;
+}

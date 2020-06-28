@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>КЕФИР</title>
+
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="images/icon.png">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+
+
+	<style type="text/css">
+		::-webkit-scrollbar 
+		{
+			display: none;
+		}
+		{
+  			-ms-overflow-style: none;  /* IE and Edge */
+  			scrollbar-width: none;  /* Firefox */
+		}
+	</style>
+</head>
+<body>
+
+	<noscript>
+		Javascript наше всё. Гафики красивые, штучки интерактивные, всё такое. 
+		Бетховены не майню, не ссыте.
+	</noscript>
+
+	<div class="header" >
+		<p class="text-title">КЕФИР</p>
+		<p class="text-subtitle">Про <b>К</b>отиков, <b>Е</b>нотиков, <b>Ф</b>отки <b>и</b> <b>Р</b>обототехнику</p>
+	</div>
+
+	<div class="about">
+		<div class='description'>
+			<p class="text-header">И чойта такое?</p>
+			<p class="text-regular">Это рассказы за робототехнику и всё, что с ней связано</p>
+			<!-- <p class="text-regular">Цель <b>КЕФИР</b>а - рассказать про то, что существует в мире робототехники</p>
+			<p class="text-regular">Цель <b>КЕФИР</b>а - показать юному робототехнику мир серьезной робототехники</p>
+			<p class="text-regular">Цель <b>КЕФИР</b>а - подстегнуть интерес к Английскому. Именно поэтому словечки на английском. Чтобы потом гуглить на английском</p> -->
+			</div>
+
+		<!-- <div class='goal'>
+			<p class="text-header">Зачем оно мне</p>
+			<br>
+			<p class="text-regular">Мой опыт школьной робототехники: научились ездить по энкодерам и по линии. Считаем за верх мастерства. И это печально</p>
+			<p class="text-regular">По-приколу</p>
+		</div> -->
+	</div>
+	
+	<div class="table-of-contents">
+
+		<div class='machine-learning'>
+			<div class='about'>
+				<p class="text-header">Машина обучалась, обучалась…</p>
+				<p class="text-regular">Машинное обучение и всякие плюшки</p>
+			</div>
+
+			<div class='content-grid'>
+				<div class='card'>
+					<a class='card-link' href='articles/sample_article/sample_article.html'>
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<img class="card-img" src='articles/machine_learning/loss/thumb.png'>
+							</div>
+							<div class='card-tags'>
+								<p class='tag'>Loss function</p>
+								<p class='tag'>Crossentropy</p>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Если можно померить, то можно и поправить
+							</div>
+
+							<div class='card-text'>
+								Про то, что такое функции ошибки
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<img class="card-img" src='articles/machine_learning/gradient_descent/thumb.png'>
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Gradient descent</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Спускамси на дно
+							</div>
+
+							<div class='card-text'>
+								Про то, что такое градиентный спуск
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<img class="card-img" src='articles/machine_learning/choosing_pooling/thumb.png'>
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Max pooling</div>
+								<div class='tag'>Min pooling</div>
+								<div class='tag'>Average pooling</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Выбираем Pooling
+							</div>
+
+							<div class='card-text'>
+								Про то, какой метод pooling-а лучше подойдёт в конкретной ситуации.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class='control-theory'>
+			<div class='about'>
+				<p class="text-header">Спокойно, всё под контролем</p>
+				<p class="text-regular">Про то, как теория контроля держит всё под контролем</p>
+			</div>
+
+			<div class='content-grid'>
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Kalman filter</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Как-то Калман заскучал...
+							</div>
+
+							<div class='card-text'>
+								Что такое фильтр Калмана, куда его можно пристроить и почему лучше ещё разок измерить
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Estimators</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Приблизительно так как-то
+							</div>
+
+							<div class='card-text'>
+								Печально, когда зрение стало подводить и линейкой точно измерить не получается. Не нужно волноваться, на помощь выезжает бригада эстиматоров. 
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>LQR</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								В LQR счастье
+							</div>
+
+							<div class='card-text'>
+								Вот бы можно было сказать чего хочешь, и оно само как-нибудь. Linear Quadratic Regulator может.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class='computer-vision'>
+			<div class='about'>
+				<p class="text-header">Компьютер вдруг прозрел</p>
+				<p class="text-regular">Про то, как робяты занимались сурьёзными исследованиями, а получили фильты для Инстаграма</p>
+			</div>
+
+			<div class='content-grid'>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Kernel</div>
+								<div class='tag'>Convolution</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Как сделать свои фильтры для Инстаграма
+							</div>
+
+							<div class='card-text'>
+								Ша сё буит
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class='devops'>
+			<div class='about'>
+				<p class="text-header">Клац-клац и в продакшн</p>
+				<p class="text-regular">Про то, как помочь себе не забыть нажать <b>ctrl + s</b></p>
+			</div>
+
+			<div class='content-grid'>
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Version Control</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Git помнит всё
+							</div>
+
+							<div class='card-text'>
+								Как-то раз я открыл свой проект и увидел это:
+								program.py, program_final.py, program_backup.py, program_backup2.py, program_new_feature.py. Хватит это терпеть! Чего делать? Заходь, узнаешь
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>CI/CD</div>
+								<div class='tag'>Automatic build</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Весь день уже интегрируем
+							</div>
+
+							<div class='card-text'>
+								Ыыыы, опять заливать на тестовый сервак.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Docker</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Каждому по контейнеру
+							</div>
+
+							<div class='card-text'>
+								"Алё, Саня? Та, прога, что ты мне скинул, не хочет работать. Ты хоть запускал? Запускал... У тебя работает? Библиотека нужна? Ок... Неее, всё равно не пашет."
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class='probstat'>
+			<div class='about'>
+				<p class="text-header">Статистикус-Вероятнус</p>
+				<p class="text-regular">Дополнительные материалы по теории вероятности и статистике. Для тех, кто не въехал в то, что выше</p>
+			</div>
+
+			<div class='content-grid'>
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Normal distribution</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Нормально распределили? Нормально!
+							</div>
+
+							<div class='card-text'>
+								Не, ну нормально? Как это можно какое-то распределение назвать нормальным? А остальные, что, не нормальные? Давайте разбираться.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Mean</div>
+								<div class='tag'>Average</div>
+								<div class='tag'>Median</div>
+								<div class='tag'>Mode</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Средний среднему рознь
+							</div>
+
+							<div class='card-text'>
+								Ложь, ложь, не туда ложь, сюда ложь. И статистика. Рассказ про то, как Марк Иваныч читал газету за завтраком.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Confusion matrix</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Вот это конфуз
+							</div>
+
+							<div class='card-text'>
+								Да, да. Именно та матрица, что сконфузила не одного джунтельмена.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Sampling</div>
+								<div class='tag'>Population</div>
+								<div class='tag'>Dataset split</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Всех поровну поделим или как собрать датасет
+							</div>
+
+							<div class='card-text'>
+								Надо бы узнать, как оторвавшийся чайный пакетик влияет на настроение. Мы жыж исследователи. Только всех вломцы распрашивать. Это же сколько бумаги перевести на тесты придётся. Потом ещё зелёные дяди и тёти будут стучаться, за деревья ответить просить будут. Ну их. Лучше что-нибудь придумаем.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Hypothesis testing</div>
+								<div class='tag'>Null hypothesis</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Гипотезируем
+							</div>
+
+							<div class='card-text'>
+								Есть у меня гипотеза, что сюда кто-нибудь да кликнет. На крайняк, сам и кликну. Классно ведь, когда твоя гипотеза верна. Это же не случайность, что всё случилось так, как мы и предсказывали. Правда?
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Accuracy</div>
+								<div class='tag'>Precision</div>
+								<div class='tag'>Recall</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Показываем показатели
+							</div>
+
+							<div class='card-text'>
+								Как измерить крутость экстрасенса
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class='calculus'>
+			<div class='about'>
+				<p class="text-header">Тан-тан-тан, здесь матан</p>
+				<p class="text-regular">Дополнительные материалы по матанализу. Для тех, кто не въехал в то, что выше</p>
+			</div>
+
+			<div class='content-grid'>
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Derivative</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Производная
+							</div>
+
+							<div class='card-text'>
+								Ша, щас научимся цену биткойнов предсказывать
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Multivariable calculus</div>
+								<div class='tag'>Partial Derivative</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Частичная производная или градиент нормального человека
+							</div>
+
+							<div class='card-text'>
+								Курсы расширения сознания от секты "Матанисты". Расширяем сознание так, что уходим в n-мерные пространства. Нормальные, видимо, грибочки были.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class='linear-algebra'>
+			<div class='about'>
+				<p class="text-header">Нео был прав. Или почему нужна матрица</p>
+				<p class="text-regular">Дополнительные материалы по линейной алгебре. Для тех, кто не въехал в то, что выше</p>
+			</div>
+
+			<div class='content-grid'>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Matix</div>
+								<div class='tag'>Matix multiplication</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Вашуж матрицу
+							</div>
+
+							<div class='card-text'>
+								Чего это они циферки в коробочки понапихали?
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class='card'>
+					<a class='card-link' href="articles/sample_article/sample_article.html">
+					<div class='card-body'>
+						<div class='left-card-side'>
+							<div class='card-img-container'>
+							<!-- <img class="card-img" src='articles/choosing_pooling/thumb.png'> -->
+							</div>
+							<div class='card-tags'>
+								<div class='tag'>Matrix decomposition</div>
+							</div>
+						</div>
+
+						<br style="clear:both;"/>
+
+						<div class='right-card-side'>
+							<div class='card-title'>
+								Делать нечего - раскладываем
+							</div>
+
+							<div class='card-text'>
+								Сидели дяди и тёти, скучали. Дай, думают, чё-нить замутим. Замутить не получилось - инета-то не было. Была бумажка, карандаш, куча времени и буйное воображение. Вот что получилось.
+							</div>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer">
+	<p>Всем спасибо, всё бесплатно.</p>
+	</div>
+
+</body>
+</html>
+
+<!-- Scripts -->

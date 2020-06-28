@@ -1,0 +1,44 @@
+html, body 
+{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+article 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 10px 1080px 10px 1fr 1fr;
+}
+
+article > * 
+{
+    grid-column: 4;
+}
+
+article > figure
+{
+    margin: 10px 0;
+}
+
+article > .fullscreen 
+{
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
+
+article > .important 
+{
+    grid-column: 5 / -1;
+}
+
+article > blockquote 
+{
+    grid-column: 3 / span 2;
+    margin: 0px 0;
+    color: #666;
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
