@@ -173,6 +173,7 @@ p
 	grid-auto-rows: auto;
 	grid-column-gap: 20px;
   	background-color: #f3f3f3;
+  	padding-bottom: 30px;
 }
 
 /*Article card design*/

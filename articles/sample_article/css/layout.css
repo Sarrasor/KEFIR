@@ -36,7 +36,7 @@ article > .important
 article > blockquote 
 {
     grid-column: 3 / span 2;
-    margin: 0px 0;
+    margin: 30px 0;
     color: #666;
     border-left: 3px solid black;
     padding-left: 10px;
