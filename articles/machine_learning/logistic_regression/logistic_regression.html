@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>Логрессия дайверов</title>
+
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<meta charset="utf-8">
+		<link rel="icon" type="image/png" href="../../../images/icon.png">
+
+		<link rel="stylesheet" type="text/css" href="../../sample_article/css/wrapper.css">
+		<link rel="stylesheet" type="text/css" href="../../sample_article/css/base.css">
+		<link rel="stylesheet" type="text/css" href="../../sample_article/css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- Latex -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+
+	<body>
+		<div class='header'>
+			<div class="title">
+				<a href="../../../index.html">КЕФИР</a>
+			</div>
+			<div class='linkblock'>
+				<a href="#" class="link">Рубрикатор</a>
+				<a href="#" class="link">Всякости</a>
+			</div>
+		</div>
+
+		<article>
+			<div class='article-header'>
+				<h1>Логрессия дайверов</h1>
+
+				<p>Узнаем какие у ДиКаприо шансы стать дайвером и научимся использовать логистическую регрессию</p>
+			</div>
+
+			<h2>Словечки</h2>
+
+			<p class='tags'>Logistic regression, Binary Classification</p>	
+
+			<h2>Ситуация</h2>
+				<p>
+					Время узнать как оценить шансы ДиКаприо на заплыв и ответить на вопрос: 
+
+					<b>Какога этсамого с можно регрессию можно использовать как классификацию?</b>
+				</p>
+
+			<h2>Данные</h2>
+
+			<p>
+				О, вот и секретные документы подъехали! Агент с кодовым именем <b>Мистер Кагл</b> подкинул данных о пассажирах с Титаника. Давайте посмотрим чего там интересненького:
+			</p>
+
+			<table>
+				<thead>
+					<tr>
+						<td>Дайвер?</td>
+						<td>Стоимость билета</td>
+						<td>Кто</td>
+						<td>Родственников на борту</td>
+						<td>Возраст</td>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Неа</td>
+						<td>7.25</td>
+						<td>Дядя</td>
+						<td>1</td>
+						<td>22</td>
+					</tr>
+
+					<tr>
+						<td>Ага</td>
+						<td>71.28</td>
+						<td>Тётя</td>
+						<td>1</td>
+						<td>38</td>
+					</tr>
+
+					<tr>
+						<td>Ага</td>
+						<td>30.5</td>
+						<td>Дядя</td>
+						<td>0</td>
+						<td>52</td>
+					</tr>
+
+					<tr>
+						<td>Неа</td>
+						<td>7.8542</td>
+						<td>Тётя</td>
+						<td>0</td>
+						<td>31</td>
+					</tr>
+
+					<tr>
+						<td>...</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Попытка намба ван</h2>
+				<p></p>
+
+			<h2>Попытка намба ту</h2>
+			<p>Подойдём к проблеме аккуратнее. У нас есть два</p>
+			<p></p>
+			
+
+			<h2>Матеша</h2>
+
+				<p>
+				</p>
+
+				<blockquote>
+					<h2>Трюк-хитрюк</h2>
+
+					<p>
+						У нас есть функция \(f(x, y)\), которая принимает два аргумента - \(x\) и \(y\) и возвращает результат \( g(x)\) если \(y = 1\) или \( h(x)\) если \(y = 0\).
+					</p>
+
+					<p>
+					$$f(x, y)= \begin{cases}
+					g(x), &  \text{if } y = 1\\
+	 				h(x), & \text{if } y = 0
+					\end{cases}$$
+					</p>
+
+					<p>
+						Вот трюк, который помогает вычислить \(f(x, y)\) функцию в одну строчку:
+					</p>
+
+					<p>
+					$$f(x, y) = y * g(x) + (1-y) * h(x) $$
+					</p>
+				</blockquote>
+
+				<p>
+					Применяем трюк-хитрюк:
+				</p>
+
+				<p>
+				$$\mathcal{L}_i = -y_i*log(p(\vec{x_i}))-(1-y_i)*log(1-p(\vec{x_i}))$$
+				</p>
+
+				<p>
+					Теперь у нас есть способ измерить ошибку предсказания для элемента под номером \(i\). Вот такая функция ошибки получается для всего датасета:
+				</p>
+
+				<p>
+					$$\mathcal{L} = - \frac{1}{p} \sum_{i=1}^{p}{y_i * log(p(\vec{x_i})) + (1-y_i) * log(1-p(\vec{x_i}))}$$
+				</p>
+
+				<p>
+					С функцией ошибки разобрались. Время найти способ. Градиентный спуск тут самое оно. Вспоминаем уравнение обновления значения веса:
+				</p>
+
+				<p>
+					$$w_k = w_k - \alpha * \frac{\partial \mathcal{L}}{\partial w_k}$$
+				</p>
+				
+				<p>
+				Ох, придётся дифференцировать функцию ошибки. Кто верит на слово, можно пропускать часть с дифференцированием.
+				</p>
+
+
+				<blockquote>
+					<h2>
+						Дифференцируем функцию ошибки
+					</h2>
+
+					<p>
+						Применяем правило дифференцирования суммы, помним, что \(y_i\) - константа относительно \(w_k\):
+					</p>
+
+					<p>
+						$$\frac{\partial \mathcal{L}}{\partial w_k} = - \frac{1}{p} \sum_{i=1}^{p}{y_i * \frac{\partial \mathcal{log(p(\vec{x_i}))}}{\partial w_k} + (1-y_i) * \frac{\partial \mathcal{log(1-p(\vec{x_i}))}}{\partial w_k}}$$
+					</p>
+
+					<p>
+						Отдельно продифференцируем части с логарифмами, используя правило дифференцирования сложной функции:
+					</p>
+
+					<p>
+						$$\frac{\partial \mathcal{log(p(\vec{x_i}))}}{\partial w_k} = \frac{\partial \mathcal{log(\sigma(z(\vec{x_i})))}}{\partial w_k} = \frac{1}{p(\vec{x_i})} * \frac{\partial \sigma(z)}{\partial z} * \frac{\partial z}{\partial w_k} = $$
+					</p>
+
+					<p>
+						$$\frac{\partial \mathcal{log(1-p(\vec{x_i}))}}{\partial w_k}$$
+					</p>
+				</blockquote>
+
+
+				<p>
+					$$\frac{\partial \mathcal{L}}{\partial w_k} = - \frac{1}{p} \sum_{i=1}^{p}{(y_i - p(\vec{x_i}))\vec{x_i}[k])}$$
+				</p>
+
+
+			<h2>Вопрос века</h2>
+				<p>
+					Наконец настал черёд ответить на вопрос века: <b>"С какой вероятностью ДиКаприо поплывёт?"</b>. Вот что известно о ДиКаприо из секретных документов:
+				</p>
+
+				<table>
+					<thead>
+						<tr>
+							<td>Дайвер?</td>
+							<td>Стоимость билета</td>
+							<td>Кто</td>
+							<td>Родственников на борту</td>
+							<td>Возраст</td>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Хто знает</td>
+							<td>0</td>
+							<td>Дядя</td>
+							<td>0</td>
+							<td>23</td>
+						</tr>
+					</tbody>
+				</table>
+
+			<p>
+				Впереди спойлеры. Хотя, какие это спойлеры. Агенство экстрасенсов <b>"Логрессулька"</b> начинает свою работу:
+			</p>
+				<p>
+					model.predict([0, "Дядя", 0, 23])
+				</p>
+		</article>
+
+		<div class="footer">
+			<p>Всем спасибо, всё бесплатно.</p>
+		</div>
+	</body>
+</html>
